@@ -1,0 +1,152 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>__TITLE__</title><meta name="description" content="__DESC__">
+<script>window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments)};</script><script defer src="/_vercel/insights/script.js"></script>
+__ANALYTICS__
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
+<style>
+:root{--bg:#0b0f0c;--panel:#121813;--ink:#e8f0e6;--ink2:#b9c6b6;--muted:#7f8e7c;--rule:#223126;--money:#3ddc84;--onmoney:#06120a;--fresh:#f5c542;--open:#ff8a5b;--hand:#8fb4ff;--ghost:#2a3a2e;--tagbg:#1a2a1e;--tagfg:#9fe3bb;
+ --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;--body:"IBM Plex Sans",system-ui,sans-serif;color-scheme:dark}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]){--bg:#f4f7f3;--panel:#e9efe8;--ink:#0f1a12;--ink2:#36483b;--muted:#5f6f62;--rule:#cdd8cf;--money:#157a46;--onmoney:#f4f7f3;--fresh:#9a6b00;--open:#c2501f;--hand:#2a5fd1;--ghost:#b9c6bb;--tagbg:#d7e6da;--tagfg:#155a36;color-scheme:light}}
+:root[data-theme="light"]{--bg:#f4f7f3;--panel:#e9efe8;--ink:#0f1a12;--ink2:#36483b;--muted:#5f6f62;--rule:#cdd8cf;--money:#157a46;--onmoney:#f4f7f3;--fresh:#9a6b00;--open:#c2501f;--hand:#2a5fd1;--ghost:#b9c6bb;--tagbg:#d7e6da;--tagfg:#155a36;color-scheme:light}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--ink);font:16px/1.5 var(--body);margin:0;--pw-bg:var(--bg);--pw-ink:var(--ink);--pw-soft:var(--muted);--pw-line:var(--rule);--pw-card:var(--panel);--pw-accent:var(--money)}
+.wrap{max-width:900px;margin:0 auto;padding-inline:16px;padding-block:26px 64px}
+.eyebrow{font:500 11px/1.4 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+h1{font:700 clamp(28px,6.4vw,46px)/1.08 var(--body);margin:10px 0 12px;text-wrap:balance;letter-spacing:-.015em;max-width:22ch}
+h1 b{color:var(--money)}
+.lede{font-size:17px;max-width:60ch;margin:0;color:var(--ink2)}
+.lede b{color:var(--ink);font-weight:600}
+.for{margin:18px 0 0;padding:14px 16px;border-radius:10px;background:var(--panel);border:1px solid var(--rule);font-size:15px}
+.for b{color:var(--money)}
+.for .n{font:600 13px var(--mono);color:var(--muted);letter-spacing:.04em;text-transform:uppercase;display:block;margin-bottom:4px}
+.stats{display:flex;flex-wrap:wrap;gap:10px 26px;margin:22px 0 4px;font-variant-numeric:tabular-nums}
+.stat b{display:block;font:600 28px/1.1 var(--mono);color:var(--ink)}
+.stat.m b{color:var(--money)}.stat.f b{color:var(--fresh)}.stat.o b{color:var(--open)}
+.stat span{font-size:13px;color:var(--muted)}
+.controls{display:flex;flex-direction:column;gap:10px;margin:22px 0 10px}
+.lbl{font:500 11px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:4px 0 -4px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font:500 14px/1 var(--body);border:1px solid var(--rule);background:var(--bg);color:var(--ink2);padding:11px 12px;border-radius:999px;cursor:pointer;min-height:44px;font-variant-numeric:tabular-nums}
+.chip[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--bg)}
+.chip:focus-visible,button:focus-visible,select:focus-visible{outline:2px solid var(--money);outline-offset:2px}
+.row2{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:space-between}
+select,.btn{font:500 16px var(--body);color:var(--ink);background:var(--panel);border:1px solid var(--rule);border-radius:6px;padding:10px 12px;min-height:44px}
+select{-webkit-appearance:none;appearance:none;padding-right:30px;background-image:linear-gradient(45deg,transparent 50%,var(--muted) 50%),linear-gradient(135deg,var(--muted) 50%,transparent 50%);background-position:calc(100% - 16px) 50%,calc(100% - 11px) 50%;background-size:5px 5px;background-repeat:no-repeat;max-width:100%}
+.btn{cursor:pointer;text-decoration:none;display:inline-block}
+.count{font:12px var(--mono);color:var(--muted)}
+ol{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
+li.r{padding:14px 2px;border-top:1px solid var(--rule);display:grid;grid-template-columns:1fr auto;gap:3px 12px}
+li .a{font-weight:600;font-size:16px}
+li .amt{font:600 15px var(--mono);color:var(--money);white-space:nowrap;align-self:start;font-variant-numeric:tabular-nums}
+li .w{grid-column:1/-1;font-size:14px;color:var(--ink2)}
+li .k{grid-column:1/-1;font-size:14px;color:var(--ink);display:flex;flex-wrap:wrap;gap:4px 14px}
+li .m{grid-column:1/-1;font-size:13px;color:var(--muted);display:flex;flex-wrap:wrap;gap:4px 10px;align-items:center;font-variant-numeric:tabular-nums}
+.tag{font:500 11px/1 var(--mono);letter-spacing:.04em;text-transform:uppercase;padding:5px 7px;border-radius:4px;white-space:nowrap;background:var(--tagbg);color:var(--tagfg)}
+.tag.open{background:color-mix(in srgb,var(--open) 18%,transparent);color:var(--open)}
+.tag.fresh{background:color-mix(in srgb,var(--fresh) 18%,transparent);color:var(--fresh)}
+.tag.hand{background:color-mix(in srgb,var(--hand) 18%,transparent);color:var(--hand)}
+.more{margin:14px 0 0}
+.note{font-size:13px;color:var(--muted);max-width:65ch;margin-top:36px;border-top:1px solid var(--rule);padding-top:14px}
+.note p{margin:0 0 8px}
+.note a{color:var(--ink2)}
+.key{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:12px;color:var(--muted);margin:8px 0 0}
+.key i{display:inline-block;width:9px;height:9px;border-radius:2px;margin-right:5px;vertical-align:-1px}
+</style></head><body>
+<div class="wrap">
+  <div class="eyebrow">__EYEBROW__</div>
+  <h1 id="h1">__H1__</h1>
+  <p class="lede" id="lede">__LEDE__</p>
+  <div class="for" id="for" hidden></div>
+  <div class="stats" id="stats"></div>
+  <div class="key" id="key"></div>
+  <div class="controls">
+    <div class="lbl">What the money is likely buying</div>
+    <div class="chips" id="groups" aria-label="Trade"></div>
+    <div class="lbl">County</div>
+    <div class="chips" id="counties" aria-label="County"></div>
+    <div class="row2"><label class="count" for="sort">Sort <select id="sort"></select></label>
+      <button class="btn" id="csv" type="button">Download spreadsheet</button></div>
+    <div class="count" id="count"></div>
+  </div>
+  <ol id="list"></ol>
+  <div id="lock"></div>
+  <button class="btn more" id="more" type="button" hidden>Show more</button>
+  <div id="pay"></div>
+  <div class="note">__NOTE__</div>
+</div>
+<script src="/paywall.js"></script>
+<script>
+const CFG=__CFG__;
+const FREE=__FREE__;
+const $=id=>document.getElementById(id);
+const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const fmt=d=>d?new Date(d.slice(0,10)+"T12:00:00").toLocaleDateString("en-US",{month:"short",day:"numeric",year:"numeric"}):"";
+const mon=m=>new Date(m+"-15T12:00:00").toLocaleDateString("en-US",{month:"long",year:"numeric"});
+const usd=n=>"$"+Math.round(n).toLocaleString("en-US");
+let ROWS=FREE.rows,FULL=false,selG=null,selC=null,shown=40,FOR=null,VARIANT="";
+// counts come from FREE.cells (month|county|group|why -> n), which covers the WHOLE list
+const cells=Object.entries(FREE.cells).map(([k,n])=>{const [month,county,group,why]=k.split("|");return {month,county,group,why,n}});
+const sum=f=>cells.filter(f).reduce((a,c)=>a+c.n,0);
+const LATEST=cells.map(c=>c.month).sort().pop();
+const inSel=c=>(!selG||c.group===selG)&&(!selC||c.county===selC);
+function stats(){
+  const n=sum(c=>inSel(c)&&c.month===LATEST),all=sum(inSel),open=sum(c=>inSel(c)&&(c.why==="Opening"||c.why==="Changed hands"));
+  $("stats").innerHTML=`<div class="stat m"><b>${all}</b><span>loans approved in the last 12 months${selC?" in "+esc(selC)+" County":""}</span></div><div class="stat f"><b>${n}</b><span>in ${mon(LATEST)}, the newest month</span></div><div class="stat o"><b>${open}</b><span>loans to a business opening or just bought</span></div>`;
+}
+$("key").innerHTML=`<span><i style="background:var(--money)"></i>amount approved</span><span><i style="background:var(--fresh)"></i>how new the money is</span><span><i style="background:var(--open)"></i>why now</span><span><i style="background:var(--hand)"></i>money in hand yet</span>`;
+function chips(){
+  const G=CFG.groupOrder.map(g=>[g,sum(c=>c.group===g&&(!selC||c.county===selC))]).filter(x=>x[1]);
+  $("groups").innerHTML=[["All",sum(c=>!selC||c.county===selC)],...G].map(([g,n])=>`<button class="chip" type="button" data-g="${esc(g)}" aria-pressed="${(g==="All"&&!selG)||g===selG}">${esc(g)} · ${n}</button>`).join("");
+  const C=CFG.countyOrder.map(k=>[k,sum(c=>c.county===k&&(!selG||c.group===selG))]).filter(x=>x[1]);
+  $("counties").innerHTML=[["All",sum(c=>!selG||c.group===selG)],...C].map(([k,n])=>`<button class="chip" type="button" data-c="${esc(k)}" aria-pressed="${(k==="All"&&!selC)||k===selC}">${esc(k)} · ${n}</button>`).join("");
+}
+$("groups").onclick=e=>{const b=e.target.closest(".chip");if(!b)return;selG=b.dataset.g==="All"?null:b.dataset.g;shown=40;chips();stats();render();Paywall.track("filter",{g:selG||"All"})};
+$("counties").onclick=e=>{const b=e.target.closest(".chip");if(!b)return;selC=b.dataset.c==="All"?null:b.dataset.c;shown=40;chips();stats();render();Paywall.track("filter",{c:selC||"All"})};
+$("sort").innerHTML=CFG.sorts.map(([k,l,paid])=>`<option value="${k}">${esc(l)}${paid&&!FULL?" (full list)":""}</option>`).join("");
+function filtered(){const r=ROWS.filter(x=>(!selG||x.group===selG)&&(!selC||x.county===selC));const k=$("sort").value;return (CFG.sortFn[k]||CFG.sortFn[CFG.sorts[0][0]])(r.slice())}
+function whyTag(r){return `<span class="tag ${r.why==="Opening"||r.why==="Changed hands"?"open":""}">${esc(r.why)}</span>`}
+function row(r){
+  const amt=FULL?usd(r.amount):esc(r.band);
+  return `<li class="r"><span class="a">${esc(r.name)}</span><span class="amt">${amt}</span><span class="w">${esc(r.what)}${r.franchise?` · ${esc(r.franchise)} franchise`:""}</span>${FULL?`<span class="k">${esc(r.street)}, ${esc(r.city)} ${esc(r.zip)} · ${esc(r.lender)}${r.jobs?` · ${r.jobs} jobs`:""}${r.term?` · ${r.term} mo`:""}</span>`:""}<span class="m"><span class="tag fresh">${esc(fmt(r.approved))}</span>${whyTag(r)}${FULL?(r.drawn?`<span class="tag hand">Drawn ${esc(fmt(r.drawn))}</span>`:`<span class="tag hand">Not drawn yet</span>`):""}<span>${esc(r.city)} · ${esc(r.county)}</span><span>${esc(r.group)}</span><span>${esc(r.program)}</span></span></li>`;
+}
+function render(){
+  const rows=filtered();const tot=sum(inSel);
+  $("count").textContent=FULL?`Showing ${Math.min(shown,rows.length)} of ${rows.length}`:`${rows.length} of ${tot} open to look at, no login`;
+  $("list").innerHTML=rows.slice(0,FULL?shown:99).map(row).join("");
+  $("more").hidden=!FULL||shown>=rows.length;
+  $("lock").innerHTML=FULL?"":Paywall.lockRow(CFG.lockText(tot-rows.length));
+}
+$("more").onclick=()=>{shown+=60;render()};
+let lastSort=$("sort").value;
+$("sort").onchange=()=>{const s=CFG.sorts.find(x=>x[0]===$("sort").value);if(s&&s[2]&&!FULL){$("sort").value=lastSort;Paywall.track("lock_click",{what:"sort"});Paywall.go();return}lastSort=$("sort").value;shown=40;render();Paywall.track("sort",{k:lastSort})};
+$("csv").onclick=()=>{
+  if(!FULL){Paywall.track("lock_click",{what:"csv"});Paywall.go();return}
+  const rows=filtered(),q=v=>{v=String(v??"");return /[",\n]/.test(v)?'"'+v.replace(/"/g,'""')+'"':v};
+  const t=[CFG.cols.map(c=>q(c[1])).join(","),...rows.map(r=>CFG.cols.map(c=>q(r[c[0]])).join(","))].join("\n");
+  const a=document.createElement("a");a.href=URL.createObjectURL(new Blob([t],{type:"text/csv"}));a.download=CFG.csv;document.body.appendChild(a);a.click();a.remove();
+  Paywall.track("download",{rows:rows.length});
+};
+// /for/<token>/ opens on the reader's own county and trade (site/for.json: token -> company, city, county, groups, variant)
+async function forPage(){
+  const m=/^\/for\/([a-z0-9]{6,16})\/?$/.exec(location.pathname);if(!m)return;
+  try{const all=await fetch("/for.json").then(r=>r.json());FOR=all[m[1]]||null}catch(e){}
+  if(!FOR)return;
+  VARIANT=FOR.variant||"";
+  selC=CFG.countyOrder.includes(FOR.county)?FOR.county:null;
+  const g=(FOR.groups||[]).find(x=>sum(c=>c.group===x&&(!selC||c.county===selC))>0);selG=g||null;
+  const inCity=FOR.city_n||0,inCounty=sum(inSel),month=sum(c=>inSel(c)&&c.month===LATEST);
+  $("for").hidden=false;
+  $("for").innerHTML=`<span class="n">For ${esc(FOR.company)}, ${esc(FOR.city)}</span><b>${inCounty}</b> businesses in ${esc(selC||"the seven counties")}${selG?` likely buying <b>${esc(selG.toLowerCase())}</b> work`:""} got an SBA loan in the last 12 months, <b>${month}</b> of them in ${mon(LATEST)}${inCity?`, and <b>${inCity}</b> ${inCity===1?"is":"are"} in ${esc(FOR.city)} itself`:""}.`;
+}
+forPage().then(()=>{
+  chips();stats();render();
+  Paywall.track("preview_open",{path:location.pathname,variant:VARIANT});
+  Paywall.init({slot:$("pay"),ctx:{path:location.pathname,variant:VARIANT},onUnlock:(d)=>{ROWS=d.rows;FULL=true;
+    $("sort").innerHTML=CFG.sorts.map(([k,l])=>`<option value="${k}">${esc(l)}</option>`).join("");
+    shown=40;chips();stats();render()}}).then(()=>{if(!FULL)render()});
+});
+</script>
+</body></html>

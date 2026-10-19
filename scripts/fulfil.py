@@ -16,7 +16,7 @@ from pathlib import Path
 import requests
 
 ROOT = Path(__file__).resolve().parent.parent
-OFFER = json.loads((ROOT / "site/offer.json").read_text())
+OFFER = json.loads((ROOT / "site/public/offer.json").read_text())
 SITE, PRODUCT = OFFER["site"], OFFER["product"]
 ALPHA = "23456789BCDFGHJKMNPQRSTVWXYZ"  # same as site/api/_lib.js
 

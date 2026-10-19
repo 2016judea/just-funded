@@ -1,0 +1,15 @@
+{
+ "_what": "SBA 7(a) and 504 FOIA loans, cut to the seven-county Twin Cities market (ProjectCounty).",
+ "source_page": "https://data.sba.gov/dataset/7a-504-foia",
+ "licence": "U.S. Government Works (public domain)",
+ "attribution": "U.S. Small Business Administration, 7(a) & 504 FOIA release",
+ "as_of": "260630",
+ "urls": {
+  "504": "https://data.sba.gov/sites/default/files/uploaded_resources/FOIA_504_FY2010_Present_asof_260630.csv",
+  "7a": "https://data.sba.gov/sites/default/files/uploaded_resources/FOIA_7a_FY2020_Present_asof_260630.csv"
+ },
+ "rows": {
+  "7a": 6584,
+  "504": 2238
+ }
+}

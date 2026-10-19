@@ -1,0 +1,307 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Just Funded</title><meta name="description" content="616 Twin Cities businesses got an SBA 7(a) or 504 loan approved in the last twelve months. Who, where, how much, and what they are about to buy.">
+<script>window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments)};</script><script defer src="/_vercel/insights/script.js"></script>
+<!-- bm-posthog:begin v2 — shared across every Vercel prototype; source ~/.claude/skills/site-analytics/posthog_snippet.html. ?me=1 opts this browser out on this site (?me=0 undoes); ?me=1&next=host1,host2 walks the opt-out across sites; headless (navigator.webdriver) never loads it. -->
+<script>
+(function(w,d){var S="just-funded",K="bm_me",me=false,u,p,n;
+try{u=new URLSearchParams(location.search);p=u.get("me");n=u.get("next");}catch(e){}
+try{if(p==="1"){localStorage.setItem(K,"1");}else if(p==="0"){localStorage.removeItem(K);}}catch(e){}
+if(p==="1"){d.cookie=K+"=1; path=/; max-age=63072000; SameSite=Lax";}else if(p==="0"){d.cookie=K+"=; path=/; max-age=0; SameSite=Lax";}
+try{me=localStorage.getItem(K)==="1";}catch(e){}
+if(!me&&/(?:^|; )bm_me=1/.test(d.cookie))me=true;
+if(p==="1"&&n){var h=n.split(","),f=h.shift();if(/^[a-z0-9.-]+$/.test(f)&&(f.slice(-11)===".vercel.app"||f==="brickandmortar.dev"||f==="readglean.com")){location.replace("https://"+f+"/?me=1"+(h.length?"&next="+h.join(","):""));}}
+if(navigator.webdriver===true)return;
+!function(t,e){var o,n,p,r;e.__SV||(w.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init capture register register_once unregister identify setPersonProperties reset get_distinct_id get_session_id alias set_config startSessionRecording stopSessionRecording opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing captureException getFeatureFlag isFeatureEnabled onFeatureFlags".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(d,w.posthog||[]);
+posthog.init("phc_yFgRGppL6H7DvhgZTQKbHdrY5oqnpLT482rrNYtLqnAx",{api_host:"https://us.i.posthog.com",person_profiles:"identified_only",persistence:"localStorage+cookie",opt_out_capturing_by_default:me});
+if(me){posthog.opt_out_capturing();}else{if(p==="0")posthog.opt_in_capturing();posthog.register({site:S});}
+})(window,document);
+</script>
+<!-- bm-posthog:end -->
+<script>/* bm-visitor-id — who read this page, on how many days, and what they touched.
+   Source of truth: bricks/scripts/outreach/reader_events.js (inlined by visitor_id.py
+   into every /for/ page; pasted verbatim into buying-window, pt-rates, salon-rates).
+
+   PostHog keeps an anonymous distinct_id in localStorage + cookie, so a return
+   visit on another day is the same reader (Vercel's hash rotates daily). Every
+   event also goes to Vercel custom events (va.track) so the dashboard shows it.
+
+   Events: $pageview (auto), download, sort, filter, row_click, row_expand,
+   link_click, scroll_depth (25/50/75/100), time_on_page (seconds visible). */
+(function () {
+  var KEY = 'phc_yFgRGppL6H7DvhgZTQKbHdrY5oqnpLT482rrNYtLqnAx';
+  var q = [], ready = false;
+  window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  function cut(v) { return String(v == null ? '' : v).replace(/\s+/g, ' ').trim().slice(0, 120); }
+  function send(name, props, beacon) {
+    props = props || {};
+    try { window.va('event', { name: name, data: props }); } catch (e) {}
+    if (ready) { try { posthog.capture(name, props, beacon ? { transport: 'sendBeacon' } : undefined); } catch (e) {} }
+    else q.push([name, props]);
+  }
+  /* Opt-out + headless guard (2026-10-12), the same rules as the shared bm-posthog block
+     (scripts/posthog_block.html): ?me=1 opts this browser out for good, ?me=0 undoes it,
+     navigator.webdriver never loads PostHog. Defer to that block when the page carries it. */
+  var me = false, mp = null;
+  try { mp = new URLSearchParams(location.search).get('me'); } catch (e) {}
+  try { if (mp === '1') localStorage.setItem('bm_me', '1'); else if (mp === '0') localStorage.removeItem('bm_me'); } catch (e) {}
+  if (mp === '1') document.cookie = 'bm_me=1; path=/; max-age=63072000; SameSite=Lax';
+  else if (mp === '0') document.cookie = 'bm_me=; path=/; max-age=0; SameSite=Lax';
+  try { me = localStorage.getItem('bm_me') === '1'; } catch (e) {}
+  if (!me && /(?:^|; )bm_me=1/.test(document.cookie)) me = true;
+  function go() {
+    posthog.register({ path: location.pathname });
+    ready = true;
+    while (q.length) { var e = q.shift(); posthog.capture(e[0], e[1]); }
+  }
+  if (window.posthog && window.posthog.__SV) {
+    go();
+  } else if (navigator.webdriver !== true) {
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://us-assets.i.posthog.com/static/array.js';
+    s.onload = function () {
+      posthog.init(KEY, { api_host: 'https://us.i.posthog.com', person_profiles: 'identified_only',
+                          persistence: 'localStorage+cookie', opt_out_capturing_by_default: me });
+      if (me) { posthog.opt_out_capturing(); return; }
+      if (mp === '0') posthog.opt_in_capturing();
+      posthog.register({ site: 'bricks' });
+      go();
+    };
+    document.head.appendChild(s);
+  }
+
+  function label(el) {
+    return cut(el.getAttribute('aria-label') || el.name || el.id || el.getAttribute('placeholder') || 'control');
+  }
+  function rowText(el) {
+    var k = el.querySelector('.a, .name, td, summary, b, strong');
+    return cut((k || el).textContent);
+  }
+
+  document.addEventListener('click', function (ev) {
+    var t = ev.target;
+    if (!t || !t.closest) return;
+    var a = t.closest('a[href]');
+    if (a) {
+      var h = a.getAttribute('href') || '';
+      if (a.hasAttribute('download') || /\.csv(\?|$)|\/api\/export/.test(h)) {
+        send('download', { file: cut(a.getAttribute('download') || h.split('?')[0].split('/').pop() || a.textContent), href: cut(h) });
+      } else {
+        send('link_click', { href: cut(a.href), text: cut(a.textContent) });
+      }
+      return;
+    }
+    var th = t.closest('th');
+    if (th) { send('sort', { column: cut(th.textContent) }); return; }
+    var opt = t.closest('[role=option]');
+    if (opt) { send('row_click', { row: cut((opt.firstElementChild || opt).textContent) }); return; }
+    var chip = t.closest('.chip, [aria-pressed], [role=tab]');
+    if (chip) {
+      var grp = chip.parentElement;
+      send('filter', { column: cut((grp && (grp.getAttribute('aria-label') || grp.id)) || 'chips'), value: cut(chip.textContent) });
+      return;
+    }
+    var pick = t.closest('button[data-id], button[data-slug], [data-row]');
+    if (pick) { send('row_click', { row: cut(pick.textContent) }); return; }
+    if (t.closest('summary')) return; /* counted by the toggle listener */
+    var row = t.closest('tbody tr, ol > li, ul > li, tr[class]');
+    if (row && !t.closest('nav, header, footer')) { send('row_click', { row: rowText(row) }); return; }
+    var b = t.closest('button');
+    if (b) send('button', { id: cut(b.id || b.textContent) });
+  }, true);
+
+  document.addEventListener('change', function (ev) {
+    var el = ev.target;
+    if (!el || el.tagName !== 'SELECT') return;
+    var v = el.options[el.selectedIndex] ? el.options[el.selectedIndex].text : el.value;
+    send(/sort|order/i.test(el.id + ' ' + el.name) ? 'sort' : 'filter', { column: label(el), value: cut(v) });
+  }, true);
+
+  var typing = {};
+  document.addEventListener('input', function (ev) {
+    var el = ev.target;
+    if (!el || el.tagName !== 'INPUT' || !/^(search|text)$/.test(el.type)) return;
+    var k = label(el);
+    clearTimeout(typing[k]);
+    typing[k] = setTimeout(function () { if (el.value.trim()) send('filter', { column: k, value: cut(el.value) }); }, 900);
+  }, true);
+
+  document.addEventListener('toggle', function (ev) {
+    var d = ev.target;
+    if (d && d.tagName === 'DETAILS' && d.open) {
+      var sm = d.querySelector('summary');
+      send('row_expand', { row: cut(sm ? sm.textContent : d.textContent) });
+    }
+  }, true);
+
+  var marks = [25, 50, 75, 100], hit = 0;
+  function depth() {
+    var de = document.documentElement;
+    var seen = (window.scrollY + window.innerHeight) / Math.max(de.scrollHeight, 1) * 100;
+    while (marks.length && seen >= marks[0] - 1) { hit = marks.shift(); send('scroll_depth', { depth: hit }); }
+  }
+  window.addEventListener('scroll', depth, { passive: true });
+  window.addEventListener('load', depth);
+
+  var shown = 0, since = document.visibilityState === 'visible' ? Date.now() : 0;
+  function flush() {
+    if (since) { shown += Date.now() - since; since = 0; }
+    if (shown >= 1000) send('time_on_page', { seconds: Math.round(shown / 1000), max_depth: hit }, true);
+    shown = 0;
+  }
+  document.addEventListener('visibilitychange', function () {
+    if (document.visibilityState === 'hidden') flush(); else since = Date.now();
+  });
+  window.addEventListener('pagehide', flush);
+})();</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
+<style>
+:root{--bg:#0b0f0c;--panel:#121813;--ink:#e8f0e6;--ink2:#b9c6b6;--muted:#7f8e7c;--rule:#223126;--money:#3ddc84;--onmoney:#06120a;--fresh:#f5c542;--open:#ff8a5b;--hand:#8fb4ff;--ghost:#2a3a2e;--tagbg:#1a2a1e;--tagfg:#9fe3bb;
+ --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;--body:"IBM Plex Sans",system-ui,sans-serif;color-scheme:dark}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]){--bg:#f4f7f3;--panel:#e9efe8;--ink:#0f1a12;--ink2:#36483b;--muted:#5f6f62;--rule:#cdd8cf;--money:#157a46;--onmoney:#f4f7f3;--fresh:#9a6b00;--open:#c2501f;--hand:#2a5fd1;--ghost:#b9c6bb;--tagbg:#d7e6da;--tagfg:#155a36;color-scheme:light}}
+:root[data-theme="light"]{--bg:#f4f7f3;--panel:#e9efe8;--ink:#0f1a12;--ink2:#36483b;--muted:#5f6f62;--rule:#cdd8cf;--money:#157a46;--onmoney:#f4f7f3;--fresh:#9a6b00;--open:#c2501f;--hand:#2a5fd1;--ghost:#b9c6bb;--tagbg:#d7e6da;--tagfg:#155a36;color-scheme:light}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--ink);font:16px/1.5 var(--body);margin:0;--pw-bg:var(--bg);--pw-ink:var(--ink);--pw-soft:var(--muted);--pw-line:var(--rule);--pw-card:var(--panel);--pw-accent:var(--money)}
+.wrap{max-width:900px;margin:0 auto;padding-inline:16px;padding-block:26px 64px}
+.eyebrow{font:500 11px/1.4 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+h1{font:700 clamp(28px,6.4vw,46px)/1.08 var(--body);margin:10px 0 12px;text-wrap:balance;letter-spacing:-.015em;max-width:22ch}
+h1 b{color:var(--money)}
+.lede{font-size:17px;max-width:60ch;margin:0;color:var(--ink2)}
+.lede b{color:var(--ink);font-weight:600}
+.for{margin:18px 0 0;padding:14px 16px;border-radius:10px;background:var(--panel);border:1px solid var(--rule);font-size:15px}
+.for b{color:var(--money)}
+.for .n{font:600 13px var(--mono);color:var(--muted);letter-spacing:.04em;text-transform:uppercase;display:block;margin-bottom:4px}
+.stats{display:flex;flex-wrap:wrap;gap:10px 26px;margin:22px 0 4px;font-variant-numeric:tabular-nums}
+.stat b{display:block;font:600 28px/1.1 var(--mono);color:var(--ink)}
+.stat.m b{color:var(--money)}.stat.f b{color:var(--fresh)}.stat.o b{color:var(--open)}
+.stat span{font-size:13px;color:var(--muted)}
+.controls{display:flex;flex-direction:column;gap:10px;margin:22px 0 10px}
+.lbl{font:500 11px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:4px 0 -4px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font:500 14px/1 var(--body);border:1px solid var(--rule);background:var(--bg);color:var(--ink2);padding:11px 12px;border-radius:999px;cursor:pointer;min-height:44px;font-variant-numeric:tabular-nums}
+.chip[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--bg)}
+.chip:focus-visible,button:focus-visible,select:focus-visible{outline:2px solid var(--money);outline-offset:2px}
+.row2{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:space-between}
+select,.btn{font:500 16px var(--body);color:var(--ink);background:var(--panel);border:1px solid var(--rule);border-radius:6px;padding:10px 12px;min-height:44px}
+select{-webkit-appearance:none;appearance:none;padding-right:30px;background-image:linear-gradient(45deg,transparent 50%,var(--muted) 50%),linear-gradient(135deg,var(--muted) 50%,transparent 50%);background-position:calc(100% - 16px) 50%,calc(100% - 11px) 50%;background-size:5px 5px;background-repeat:no-repeat;max-width:100%}
+.btn{cursor:pointer;text-decoration:none;display:inline-block}
+.count{font:12px var(--mono);color:var(--muted)}
+ol{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
+li.r{padding:14px 2px;border-top:1px solid var(--rule);display:grid;grid-template-columns:1fr auto;gap:3px 12px}
+li .a{font-weight:600;font-size:16px}
+li .amt{font:600 15px var(--mono);color:var(--money);white-space:nowrap;align-self:start;font-variant-numeric:tabular-nums}
+li .w{grid-column:1/-1;font-size:14px;color:var(--ink2)}
+li .k{grid-column:1/-1;font-size:14px;color:var(--ink);display:flex;flex-wrap:wrap;gap:4px 14px}
+li .m{grid-column:1/-1;font-size:13px;color:var(--muted);display:flex;flex-wrap:wrap;gap:4px 10px;align-items:center;font-variant-numeric:tabular-nums}
+.tag{font:500 11px/1 var(--mono);letter-spacing:.04em;text-transform:uppercase;padding:5px 7px;border-radius:4px;white-space:nowrap;background:var(--tagbg);color:var(--tagfg)}
+.tag.open{background:color-mix(in srgb,var(--open) 18%,transparent);color:var(--open)}
+.tag.fresh{background:color-mix(in srgb,var(--fresh) 18%,transparent);color:var(--fresh)}
+.tag.hand{background:color-mix(in srgb,var(--hand) 18%,transparent);color:var(--hand)}
+.more{margin:14px 0 0}
+.note{font-size:13px;color:var(--muted);max-width:65ch;margin-top:36px;border-top:1px solid var(--rule);padding-top:14px}
+.note p{margin:0 0 8px}
+.note a{color:var(--ink2)}
+.key{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:12px;color:var(--muted);margin:8px 0 0}
+.key i{display:inline-block;width:9px;height:9px;border-radius:2px;margin-right:5px;vertical-align:-1px}
+</style></head><body>
+<div class="wrap">
+  <div class="eyebrow">For contractors, equipment dealers and HVAC-R · SBA public records · as of Jun 30, 2026</div>
+  <h1 id="h1"><b>41</b> Twin Cities businesses got an SBA loan in June 2026. Here is who, and what they are about to buy.</h1>
+  <p class="lede" id="lede">Every SBA 7(a) and 504 loan approved in the seven counties in the last twelve months: <b>710 loans to 616 borrowers</b>, median <b>$225,250</b>. <b>187</b> of them are opening a business or just bought one. They have the money now, and the fit-out, the kitchen, the line and the rooftop unit are what it buys.</p>
+  <div class="for" id="for" hidden></div>
+  <div class="stats" id="stats"></div>
+  <div class="key" id="key"></div>
+  <div class="controls">
+    <div class="lbl">What the money is likely buying</div>
+    <div class="chips" id="groups" aria-label="Trade"></div>
+    <div class="lbl">County</div>
+    <div class="chips" id="counties" aria-label="County"></div>
+    <div class="row2"><label class="count" for="sort">Sort <select id="sort"></select></label>
+      <button class="btn" id="csv" type="button">Download spreadsheet</button></div>
+    <div class="count" id="count"></div>
+  </div>
+  <ol id="list"></ol>
+  <div id="lock"></div>
+  <button class="btn more" id="more" type="button" hidden>Show more</button>
+  <div id="pay"></div>
+  <div class="note"><p>Source: the U.S. Small Business Administration's 7(a) and 504 FOIA release, public domain, as of Jun 30, 2026 (the SBA publishes it quarterly, so the newest loans here are one to four months old; we re-pull every week and the list changes when the SBA does). Project county in Hennepin, Ramsey, Dakota, Anoka, Washington, Scott or Carver. Loans cancelled or never funded are left out (154 of them).</p><p>How to read it. The amount is what the SBA approved, not what has been spent. <i>Drawn</i> is the SBA's first-disbursement date; a loan not yet drawn is committed money the borrower has not pulled. <i>Likely buying</i> is read off the borrower's NAICS code: a restaurant buys a kitchen and a hood, a clinic buys a fit-out, a manufacturer buys a line. <i>Why now</i> is the SBA's business-age field: opening, under two years old, changed hands, or existing.</p><p>From Aidan Jude at Brick &amp; Mortar (aidan@brickandmortar.dev).</p></div>
+</div>
+<script src="/paywall.js"></script>
+<script>
+const CFG={groupOrder:["Restaurant & food", "Clinic & care", "Industrial & wholesale", "Retail & storefront", "Salon, pet & auto service", "Hotel, fitness & fun", "Construction trade", "Office & professional", "Other"],countyOrder:["Hennepin", "Ramsey", "Dakota", "Anoka", "Washington", "Scott", "Carver"],csv:"just-funded-twin-cities-sba.csv",cols:[["name", "Borrower"], ["street", "Street"], ["city", "City"], ["zip", "Zip"], ["county", "County"], ["naics", "NAICS"], ["what", "What they do"], ["group", "Likely buying"], ["why", "Why now"], ["program", "Program"], ["amount", "Amount approved"], ["approved", "Approval date"], ["drawn", "First disbursement"], ["lender", "Lender"], ["franchise", "Franchise"], ["jobs", "Jobs supported"], ["term", "Term (months)"], ["lat", "Lat"], ["lon", "Lon"]],
+ sorts:[["newest","Newest first",false],["biggest","Biggest loan first",true],["drawn","Money drawn most recently",true],["county","By county",false]],
+ sortFn:{newest:r=>r.sort((a,b)=>b.approved.localeCompare(a.approved)||b.amount-a.amount),biggest:r=>r.sort((a,b)=>b.amount-a.amount),drawn:r=>r.sort((a,b)=>(b.drawn||"").localeCompare(a.drawn||"")||b.approved.localeCompare(a.approved)),county:r=>r.sort((a,b)=>a.county.localeCompare(b.county)||b.approved.localeCompare(a.approved))},
+ lockText:n=>`${n} more borrowers, with street, zip, exact amount, lender, and whether the money is drawn`};
+const FREE={"rows":[{"name":"Inspired Equity Group LLC","city":"Minneapolis","county":"Hennepin","what":"Roofing Contractors","group":"Construction trade","why":"Changed hands","program":"7(a)","band":"$1M to $5M","approved":"2026-06-11","month":"2026-06","franchise":""},{"name":"Elevated Investments, LLC","city":"Minneapolis","county":"Hennepin","what":"Miscellaneous Intermediation","group":"Office & professional","why":"Existing","program":"7(a)","band":"$1M to $5M","approved":"2026-06-02","month":"2026-06","franchise":""},{"name":"Eden Lakes Dental, LLC","city":"Eden Prairie","county":"Hennepin","what":"Offices of Dentists","group":"Clinic & care","why":"Existing","program":"7(a)","band":"$1M to $5M","approved":"2026-06-18","month":"2026-06","franchise":""},{"name":"Ritz Banquet LLC","city":"New Hope","county":"Hennepin","what":"Caterers","group":"Restaurant & food","why":"Existing","program":"7(a)","band":"$1M to $5M","approved":"2026-06-02","month":"2026-06","franchise":""},{"name":"Lotus Ltc Pharmacy, LLC","city":"Minneapolis","county":"Hennepin","what":"Pharmacies and Drug Retailers","group":"Retail & storefront","why":"Existing","program":"7(a)","band":"$350k to $1M","approved":"2026-06-22","month":"2026-06","franchise":""}],"cells":{"2026-06|Ramsey|Construction trade|Existing":1,"2026-06|Carver|Construction trade|Opening":2,"2026-06|Washington|Salon, pet & auto service|Opening":1,"2026-06|Hennepin|Clinic & care|Under 2 years old":1,"2026-06|Anoka|Clinic & care|Under 2 years old":1,"2026-06|Hennepin|Office & professional|Under 2 years old":3,"2026-06|Ramsey|Construction trade|Opening":2,"2026-06|Hennepin|Office & professional|Existing":7,"2026-06|Dakota|Office & professional|Existing":1,"2026-06|Hennepin|Retail & storefront|Existing":3,"2026-06|Hennepin|Industrial & wholesale|Under 2 years old":2,"2026-06|Dakota|Industrial & wholesale|Opening":2,"2026-06|Hennepin|Retail & storefront|Under 2 years old":2,"2026-06|Hennepin|Clinic & care|Existing":2,"2026-06|Hennepin|Salon, pet & auto service|Existing":2,"2026-06|Hennepin|Hotel, fitness & fun|Existing":1,"2026-06|Washington|Salon, pet & auto service|Existing":1,"2026-06|Dakota|Construction trade|Existing":1,"2026-06|Hennepin|Restaurant & food|Under 2 years old":2,"2026-06|Anoka|Construction trade|Existing":1,"2026-06|Washington|Industrial & wholesale|Existing":2,"2026-06|Dakota|Clinic & care|Opening":1,"2026-06|Hennepin|Construction trade|Changed hands":2,"2026-06|Hennepin|Hotel, fitness & fun|Opening":1,"2026-06|Dakota|Industrial & wholesale|Existing":1,"2026-06|Carver|Construction trade|Under 2 years old":1,"2026-06|Anoka|Office & professional|Existing":1,"2026-06|Hennepin|Restaurant & food|Existing":1,"2026-06|Washington|Clinic & care|Existing":1,"2026-06|Hennepin|Construction trade|Existing":1,"2026-05|Hennepin|Retail & storefront|Changed hands":2,"2026-05|Washington|Restaurant & food|Opening":1,"2026-05|Hennepin|Office & professional|Existing":5,"2026-05|Hennepin|Clinic & care|Existing":1,"2026-05|Washington|Salon, pet & auto service|Existing":1,"2026-05|Dakota|Salon, pet & auto service|Existing":1,"2026-05|Dakota|Industrial & wholesale|Changed hands":1,"2026-05|Hennepin|Retail & storefront|Under 2 years old":1,"2026-05|Anoka|Restaurant & food|Opening":1,"2026-05|Anoka|Hotel, fitness & fun|Under 2 years old":2,"2026-05|Hennepin|Restaurant & food|Existing":2,"2026-05|Hennepin|Salon, pet & auto service|Under 2 years old":1,"2026-05|Hennepin|Clinic & care|Opening":1,"2026-05|Ramsey|Office & professional|Existing":2,"2026-05|Anoka|Office & professional|Under 2 years old":1,"2026-05|Anoka|Hotel, fitness & fun|Opening":1,"2026-05|Dakota|Restaurant & food|Existing":1,"2026-05|Hennepin|Hotel, fitness & fun|Opening":4,"2026-05|Hennepin|Industrial & wholesale|Under 2 years old":1,"2026-05|Scott|Hotel, fitness & fun|Existing":1,"2026-05|Scott|Office & professional|Existing":1,"2026-05|Hennepin|Construction trade|Existing":3,"2026-05|Anoka|Clinic & care|Opening":1,"2026-05|Dakota|Office & professional|Existing":1,"2026-05|Washington|Construction trade|Existing":2,"2026-05|Washington|Office & professional|Existing":1,"2026-05|Hennepin|Restaurant & food|Opening":1,"2026-05|Hennepin|Clinic & care|Changed hands":1,"2026-05|Hennepin|Industrial & wholesale|Existing":1,"2026-05|Dakota|Hotel, fitness & fun|Under 2 years old":1,"2026-05|Hennepin|Office & professional|Opening":2,"2026-05|Anoka|Restaurant & food|Under 2 years old":1,"2026-05|Washington|Construction trade|Under 2 years old":1,"2026-05|Carver|Salon, pet & auto service|Changed hands":1,"2026-05|Hennepin|Office & professional|Under 2 years old":1,"2026-05|Scott|Retail & storefront|Under 2 years old":1,"2026-04|Ramsey|Restaurant & food|Changed hands":2,"2026-04|Dakota|Construction trade|Existing":3,"2026-04|Scott|Office & professional|Existing":3,"2026-04|Scott|Office & professional|Opening":1,"2026-04|Washington|Clinic & care|Existing":1,"2026-04|Hennepin|Clinic & care|Opening":2,"2026-04|Dakota|Clinic & care|Under 2 years old":2,"2026-04|Dakota|Clinic & care|Existing":4,"2026-04|Hennepin|Construction trade|Existing":4,"2026-04|Dakota|Industrial & wholesale|Changed hands":2,"2026-04|Hennepin|Office & professional|Under 2 years old":3,"2026-04|Hennepin|Restaurant & food|Existing":2,"2026-04|Ramsey|Restaurant & food|Under 2 years old":1,"2026-04|Hennepin|Salon, pet & auto service|Existing":1,"2026-04|Dakota|Office & professional|Changed hands":4,"2026-04|Ramsey|Construction trade|Existing":1,"2026-04|Anoka|Construction trade|Existing":1,"2026-04|Anoka|Office & professional|Under 2 years old":1,"2026-04|Anoka|Industrial & wholesale|Existing":1,"2026-04|Hennepin|Office & professional|Existing":5,"2026-04|Carver|Clinic & care|Existing":2,"2026-04|Hennepin|Industrial & wholesale|Existing":2,"2026-04|Dakota|Office & professional|Under 2 years old":1,"2026-04|Washington|Restaurant & food|Existing":1,"2026-04|Hennepin|Industrial & wholesale|Opening":1,"2026-04|Carver|Retail & storefront|Under 2 years old":1,"2026-04|Hennepin|Retail & storefront|Opening":2,"2026-04|Ramsey|Salon, pet & auto service|Existing":1,"2026-04|Hennepin|Clinic & care|Existing":1,"2026-04|Hennepin|Retail & storefront|Existing":1,"2026-04|Ramsey|Hotel, fitness & fun|Opening":1,"2026-04|Anoka|Salon, pet & auto service|Existing":1,"2026-04|Dakota|Hotel, fitness & fun|Opening":1,"2026-04|Carver|Office & professional|Existing":1,"2026-04|Dakota|Industrial & wholesale|Existing":1,"2026-04|Washington|Restaurant & food|Opening":1,"2026-04|Ramsey|Office & professional|Existing":1,"2026-03|Ramsey|Office & professional|Existing":2,"2026-03|Dakota|Industrial & wholesale|Changed hands":1,"2026-03|Dakota|Office & professional|Existing":4,"2026-03|Hennepin|Hotel, fitness & fun|Opening":2,"2026-03|Hennepin|Office & professional|Under 2 years old":2,"2026-03|Ramsey|Office & professional|Under 2 years old":1,"2026-03|Anoka|Clinic & care|Existing":1,"2026-03|Hennepin|Restaurant & food|Changed hands":1,"2026-03|Anoka|Salon, pet & auto service|Opening":1,"2026-03|Anoka|Salon, pet & auto service|Under 2 years old":1,"2026-03|Hennepin|Restaurant & food|Existing":2,"2026-03|Dakota|Restaurant & food|Under 2 years old":1,"2026-03|Hennepin|Salon, pet & auto service|Existing":2,"2026-03|Hennepin|Salon, pet & auto service|Opening":2,"2026-03|Anoka|Industrial & wholesale|Existing":1,"2026-03|Hennepin|Retail & storefront|Changed hands":2,"2026-03|Anoka|Other|Existing":1,"2026-03|Anoka|Construction trade|Existing":1,"2026-03|Ramsey|Office & professional|Changed hands":1,"2026-03|Washington|Office & professional|Under 2 years old":1,"2026-03|Dakota|Construction trade|Existing":2,"2026-03|Anoka|Salon, pet & auto service|Changed hands":1,"2026-03|Ramsey|Clinic & care|Changed hands":2,"2026-03|Hennepin|Salon, pet & auto service|Changed hands":1,"2026-03|Ramsey|Restaurant & food|Under 2 years old":1,"2026-03|Dakota|Office & professional|Opening":1,"2026-03|Scott|Industrial & wholesale|Existing":1,"2026-03|Carver|Hotel, fitness & fun|Under 2 years old":1,"2026-03|Anoka|Retail & storefront|Opening":1,"2026-03|Dakota|Restaurant & food|Existing":2,"2026-03|Anoka|Restaurant & food|Existing":1,"2026-03|Carver|Office & professional|Changed hands":1,"2026-03|Hennepin|Retail & storefront|Existing":1,"2026-03|Dakota|Construction trade|Changed hands":1,"2026-03|Washington|Clinic & care|Under 2 years old":1,"2026-03|Dakota|Industrial & wholesale|Existing":1,"2026-03|Dakota|Restaurant & food|Opening":1,"2026-03|Carver|Industrial & wholesale|Under 2 years old":1,"2026-02|Hennepin|Restaurant & food|Under 2 years old":2,"2026-02|Hennepin|Retail & storefront|Existing":1,"2026-02|Ramsey|Construction trade|Existing":3,"2026-02|Anoka|Restaurant & food|Existing":1,"2026-02|Hennepin|Hotel, fitness & fun|Existing":1,"2026-02|Dakota|Restaurant & food|Opening":2,"2026-02|Washington|Restaurant & food|Under 2 years old":2,"2026-02|Hennepin|Restaurant & food|Existing":2,"2026-02|Dakota|Retail & storefront|Under 2 years old":1,"2026-02|Hennepin|Office & professional|Under 2 years old":1,"2026-02|Anoka|Office & professional|Existing":2,"2026-02|Hennepin|Restaurant & food|Opening":1,"2026-02|Anoka|Restaurant & food|Changed hands":2,"2026-02|Hennepin|Office & professional|Existing":6,"2026-02|Hennepin|Industrial & wholesale|Existing":2,"2026-02|Hennepin|Construction trade|Existing":2,"2026-02|Hennepin|Clinic & care|Existing":1,"2026-02|Hennepin|Retail & storefront|Changed hands":1,"2026-02|Scott|Office & professional|Opening":1,"2026-02|Ramsey|Retail & storefront|Existing":1,"2026-02|Washington|Construction trade|Existing":1,"2026-02|Dakota|Industrial & wholesale|Existing":1,"2026-02|Dakota|Salon, pet & auto service|Under 2 years old":1,"2026-02|Washington|Industrial & wholesale|Existing":1,"2026-02|Dakota|Hotel, fitness & fun|Opening":1,"2026-02|Washington|Salon, pet & auto service|Opening":2,"2026-02|Washington|Office & professional|Existing":2,"2026-02|Anoka|Retail & storefront|Existing":1,"2026-02|Anoka|Salon, pet & auto service|Under 2 years old":1,"2026-01|Hennepin|Office & professional|Existing":9,"2026-01|Anoka|Retail & storefront|Under 2 years old":1,"2026-01|Dakota|Clinic & care|Changed hands":1,"2026-01|Ramsey|Office & professional|Existing":4,"2026-01|Dakota|Clinic & care|Existing":2,"2026-01|Hennepin|Salon, pet & auto service|Under 2 years old":2,"2026-01|Hennepin|Industrial & wholesale|Changed hands":3,"2026-01|Hennepin|Salon, pet & auto service|Changed hands":2,"2026-01|Ramsey|Construction trade|Existing":2,"2026-01|Ramsey|Clinic & care|Under 2 years old":1,"2026-01|Scott|Retail & storefront|Existing":1,"2026-01|Dakota|Office & professional|Opening":1,"2026-01|Hennepin|Restaurant & food|Opening":3,"2026-01|Anoka|Clinic & care|Changed hands":2,"2026-01|Anoka|Industrial & wholesale|Under 2 years old":1,"2026-01|Dakota|Hotel, fitness & fun|Under 2 years old":1,"2026-01|Hennepin|Industrial & wholesale|Existing":2,"2026-01|Carver|Industrial & wholesale|Under 2 years old":1,"2026-01|Hennepin|Salon, pet & auto service|Existing":6,"2026-01|Dakota|Hotel, fitness & fun|Opening":1,"2026-01|Hennepin|Restaurant & food|Existing":1,"2026-01|Dakota|Construction trade|Existing":1,"2026-01|Anoka|Construction trade|Opening":1,"2026-01|Washington|Restaurant & food|Opening":3,"2026-01|Ramsey|Construction trade|Under 2 years old":1,"2026-01|Washington|Industrial & wholesale|Opening":1,"2026-01|Hennepin|Industrial & wholesale|Under 2 years old":1,"2026-01|Hennepin|Retail & storefront|Existing":3,"2026-01|Dakota|Restaurant & food|Existing":1,"2026-01|Anoka|Retail & storefront|Existing":1,"2026-01|Hennepin|Hotel, fitness & fun|Opening":2,"2026-01|Washington|Office & professional|Changed hands":2,"2026-01|Anoka|Restaurant & food|Existing":1,"2026-01|Hennepin|Construction trade|Existing":3,"2026-01|Anoka|Office & professional|Opening":2,"2026-01|Washington|Other|Existing":1,"2026-01|Anoka|Clinic & care|Existing":2,"2026-01|Ramsey|Salon, pet & auto service|Changed hands":1,"2026-01|Hennepin|Office & professional|Opening":3,"2026-01|Hennepin|Construction trade|Under 2 years old":1,"2026-01|Washington|Restaurant & food|Changed hands":1,"2026-01|Hennepin|Salon, pet & auto service|Opening":2,"2026-01|Anoka|Restaurant & food|Opening":1,"2026-01|Anoka|Industrial & wholesale|Changed hands":1,"2026-01|Dakota|Salon, pet & auto service|Opening":1,"2026-01|Anoka|Industrial & wholesale|Existing":1,"2026-01|Scott|Salon, pet & auto service|Existing":1,"2026-01|Hennepin|Clinic & care|Existing":1,"2026-01|Washington|Construction trade|Existing":1,"2026-01|Ramsey|Salon, pet & auto service|Existing":1,"2026-01|Hennepin|Office & professional|Changed hands":3,"2026-01|Hennepin|Construction trade|Changed hands":2,"2026-01|Ramsey|Clinic & care|Changed hands":1,"2026-01|Ramsey|Retail & storefront|Opening":1,"2026-01|Dakota|Retail & storefront|Existing":1,"2026-01|Ramsey|Salon, pet & auto service|Under 2 years old":1,"2026-01|Dakota|Industrial & wholesale|Changed hands":1,"2026-01|Hennepin|Construction trade|Opening":2,"2026-01|Anoka|Retail & storefront|Opening":1,"2026-01|Washington|Restaurant & food|Existing":1,"2026-01|Hennepin|Restaurant & food|Changed hands":1,"2026-01|Ramsey|Restaurant & food|Under 2 years old":1,"2026-01|Dakota|Restaurant & food|Under 2 years old":1,"2025-12|Hennepin|Office & professional|Existing":8,"2025-12|Anoka|Construction trade|Under 2 years old":2,"2025-12|Anoka|Office & professional|Opening":1,"2025-12|Hennepin|Salon, pet & auto service|Opening":1,"2025-12|Hennepin|Construction trade|Existing":5,"2025-12|Ramsey|Salon, pet & auto service|Existing":2,"2025-12|Dakota|Office & professional|Changed hands":1,"2025-12|Hennepin|Clinic & care|Existing":1,"2025-12|Hennepin|Clinic & care|Changed hands":1,"2025-12|Scott|Hotel, fitness & fun|Opening":1,"2025-12|Hennepin|Industrial & wholesale|Existing":3,"2025-12|Hennepin|Industrial & wholesale|Changed hands":2,"2025-12|Hennepin|Restaurant & food|Existing":3,"2025-12|Carver|Industrial & wholesale|Existing":1,"2025-12|Washington|Hotel, fitness & fun|Changed hands":1,"2025-12|Carver|Industrial & wholesale|Changed hands":1,"2025-12|Hennepin|Retail & storefront|Under 2 years old":1,"2025-12|Washington|Hotel, fitness & fun|Existing":1,"2025-12|Hennepin|Salon, pet & auto service|Changed hands":1,"2025-12|Anoka|Restaurant & food|Changed hands":2,"2025-12|Carver|Office & professional|Existing":1,"2025-12|Anoka|Restaurant & food|Under 2 years old":1,"2025-12|Hennepin|Salon, pet & auto service|Existing":3,"2025-12|Dakota|Office & professional|Existing":2,"2025-12|Scott|Salon, pet & auto service|Under 2 years old":1,"2025-12|Hennepin|Clinic & care|Under 2 years old":2,"2025-12|Washington|Salon, pet & auto service|Changed hands":2,"2025-12|Anoka|Restaurant & food|Existing":1,"2025-12|Hennepin|Office & professional|Opening":1,"2025-12|Anoka|Construction trade|Existing":1,"2025-12|Anoka|Industrial & wholesale|Under 2 years old":2,"2025-12|Hennepin|Office & professional|Under 2 years old":1,"2025-12|Washington|Hotel, fitness & fun|Under 2 years old":1,"2025-12|Ramsey|Office & professional|Existing":2,"2025-12|Anoka|Clinic & care|Existing":2,"2025-11|Hennepin|Clinic & care|Under 2 years old":1,"2025-11|Hennepin|Salon, pet & auto service|Under 2 years old":4,"2025-11|Hennepin|Construction trade|Existing":2,"2025-11|Hennepin|Industrial & wholesale|Existing":4,"2025-11|Carver|Hotel, fitness & fun|Existing":1,"2025-11|Hennepin|Industrial & wholesale|Changed hands":2,"2025-11|Anoka|Office & professional|Existing":1,"2025-11|Dakota|Office & professional|Existing":2,"2025-11|Anoka|Retail & storefront|Existing":1,"2025-11|Anoka|Industrial & wholesale|Existing":3,"2025-11|Scott|Industrial & wholesale|Existing":2,"2025-11|Ramsey|Office & professional|Changed hands":2,"2025-11|Hennepin|Office & professional|Changed hands":2,"2025-11|Dakota|Industrial & wholesale|Under 2 years old":2,"2025-11|Anoka|Restaurant & food|Opening":2,"2025-11|Anoka|Salon, pet & auto service|Changed hands":2,"2025-11|Anoka|Other|Existing":1,"2025-11|Washington|Clinic & care|Opening":1,"2025-11|Scott|Restaurant & food|Changed hands":1,"2025-11|Ramsey|Salon, pet & auto service|Under 2 years old":2,"2025-11|Hennepin|Restaurant & food|Opening":2,"2025-11|Ramsey|Office & professional|Under 2 years old":1,"2025-11|Hennepin|Construction trade|Changed hands":2,"2025-11|Anoka|Office & professional|Opening":1,"2025-11|Scott|Office & professional|Existing":1,"2025-11|Hennepin|Retail & storefront|Existing":1,"2025-11|Washington|Salon, pet & auto service|Under 2 years old":1,"2025-11|Dakota|Construction trade|Existing":1,"2025-11|Dakota|Industrial & wholesale|Existing":2,"2025-11|Hennepin|Industrial & wholesale|Under 2 years old":1,"2025-11|Hennepin|Office & professional|Under 2 years old":2,"2025-11|Anoka|Restaurant & food|Existing":1,"2025-09|Hennepin|Clinic & care|Existing":3,"2025-09|Ramsey|Retail & storefront|Under 2 years old":3,"2025-09|Anoka|Salon, pet & auto service|Existing":1,"2025-09|Hennepin|Restaurant & food|Opening":5,"2025-09|Hennepin|Construction trade|Under 2 years old":2,"2025-09|Ramsey|Restaurant & food|Existing":1,"2025-09|Dakota|Industrial & wholesale|Existing":2,"2025-09|Washington|Restaurant & food|Opening":2,"2025-09|Ramsey|Salon, pet & auto service|Existing":1,"2025-09|Ramsey|Industrial & wholesale|Changed hands":1,"2025-09|Hennepin|Industrial & wholesale|Existing":1,"2025-09|Hennepin|Construction trade|Changed hands":1,"2025-09|Hennepin|Office & professional|Existing":7,"2025-09|Hennepin|Office & professional|Under 2 years old":3,"2025-09|Hennepin|Restaurant & food|Existing":3,"2025-09|Hennepin|Clinic & care|Opening":3,"2025-09|Hennepin|Restaurant & food|Changed hands":1,"2025-09|Ramsey|Clinic & care|Opening":2,"2025-09|Washington|Office & professional|Existing":2,"2025-09|Ramsey|Other|Under 2 years old":1,"2025-09|Carver|Salon, pet & auto service|Existing":1,"2025-09|Hennepin|Hotel, fitness & fun|Under 2 years old":1,"2025-09|Ramsey|Office & professional|Changed hands":3,"2025-09|Ramsey|Clinic & care|Existing":3,"2025-09|Washington|Construction trade|Under 2 years old":1,"2025-09|Scott|Hotel, fitness & fun|Under 2 years old":1,"2025-09|Anoka|Retail & storefront|Existing":3,"2025-09|Hennepin|Construction trade|Existing":1,"2025-09|Scott|Office & professional|Existing":1,"2025-09|Hennepin|Clinic & care|Under 2 years old":3,"2025-09|Washington|Industrial & wholesale|Changed hands":1,"2025-09|Dakota|Clinic & care|Changed hands":1,"2025-09|Ramsey|Restaurant & food|Under 2 years old":1,"2025-09|Dakota|Industrial & wholesale|Under 2 years old":1,"2025-09|Ramsey|Construction trade|Existing":5,"2025-09|Anoka|Construction trade|Existing":1,"2025-09|Hennepin|Retail & storefront|Opening":2,"2025-09|Dakota|Hotel, fitness & fun|Changed hands":1,"2025-09|Dakota|Retail & storefront|Under 2 years old":1,"2025-09|Hennepin|Office & professional|Opening":2,"2025-09|Ramsey|Salon, pet & auto service|Changed hands":1,"2025-09|Washington|Clinic & care|Existing":1,"2025-09|Ramsey|Retail & storefront|Existing":1,"2025-09|Anoka|Industrial & wholesale|Changed hands":1,"2025-09|Dakota|Hotel, fitness & fun|Under 2 years old":1,"2025-09|Hennepin|Hotel, fitness & fun|Existing":1,"2025-09|Ramsey|Restaurant & food|Changed hands":2,"2025-09|Washington|Restaurant & food|Changed hands":1,"2025-09|Dakota|Retail & storefront|Changed hands":1,"2025-09|Ramsey|Retail & storefront|Opening":1,"2025-09|Washington|Retail & storefront|Existing":1,"2025-09|Hennepin|Industrial & wholesale|Under 2 years old":1,"2025-09|Washington|Industrial & wholesale|Under 2 years old":1,"2025-08|Hennepin|Hotel, fitness & fun|Changed hands":1,"2025-08|Hennepin|Office & professional|Opening":2,"2025-08|Hennepin|Office & professional|Existing":6,"2025-08|Scott|Construction trade|Existing":1,"2025-08|Hennepin|Industrial & wholesale|Under 2 years old":1,"2025-08|Hennepin|Office & professional|Changed hands":3,"2025-08|Hennepin|Industrial & wholesale|Changed hands":1,"2025-08|Scott|Office & professional|Changed hands":1,"2025-08|Hennepin|Clinic & care|Under 2 years old":2,"2025-08|Ramsey|Restaurant & food|Existing":1,"2025-08|Hennepin|Office & professional|Under 2 years old":2,"2025-08|Hennepin|Industrial & wholesale|Existing":2,"2025-08|Hennepin|Retail & storefront|Existing":2,"2025-08|Hennepin|Salon, pet & auto service|Existing":1,"2025-08|Hennepin|Retail & storefront|Changed hands":1,"2025-08|Ramsey|Retail & storefront|Opening":1,"2025-08|Hennepin|Hotel, fitness & fun|Existing":2,"2025-08|Carver|Industrial & wholesale|Opening":1,"2025-08|Washington|Clinic & care|Existing":2,"2025-08|Ramsey|Industrial & wholesale|Changed hands":1,"2025-08|Ramsey|Restaurant & food|Opening":2,"2025-08|Ramsey|Construction trade|Changed hands":1,"2025-08|Dakota|Office & professional|Existing":2,"2025-08|Ramsey|Restaurant & food|Under 2 years old":2,"2025-08|Washington|Office & professional|Under 2 years old":1,"2025-08|Dakota|Hotel, fitness & fun|Changed hands":1,"2025-08|Washington|Office & professional|Changed hands":1,"2025-08|Dakota|Salon, pet & auto service|Existing":1,"2025-08|Anoka|Restaurant & food|Existing":1,"2025-08|Hennepin|Construction trade|Existing":4,"2025-08|Dakota|Salon, pet & auto service|Opening":1,"2025-08|Anoka|Clinic & care|Existing":1,"2025-08|Washington|Office & professional|Existing":2,"2025-08|Scott|Salon, pet & auto service|Existing":1,"2025-08|Ramsey|Office & professional|Under 2 years old":1,"2025-08|Hennepin|Hotel, fitness & fun|Opening":1,"2025-08|Hennepin|Clinic & care|Existing":1,"2025-08|Washington|Clinic & care|Under 2 years old":1,"2025-08|Anoka|Clinic & care|Changed hands":1,"2025-08|Anoka|Retail & storefront|Opening":1,"2025-08|Dakota|Clinic & care|Existing":1,"2025-08|Hennepin|Restaurant & food|Changed hands":2,"2025-08|Ramsey|Office & professional|Existing":1,"2025-08|Ramsey|Clinic & care|Existing":1,"2025-08|Anoka|Hotel, fitness & fun|Opening":1,"2025-08|Hennepin|Construction trade|Under 2 years old":2,"2025-08|Hennepin|Retail & storefront|Under 2 years old":1,"2025-08|Anoka|Office & professional|Existing":1,"2025-07|Hennepin|Clinic & care|Changed hands":2,"2025-07|Ramsey|Retail & storefront|Existing":2,"2025-07|Hennepin|Salon, pet & auto service|Existing":4,"2025-07|Hennepin|Clinic & care|Existing":1,"2025-07|Hennepin|Retail & storefront|Existing":1,"2025-07|Washington|Construction trade|Opening":1,"2025-07|Ramsey|Industrial & wholesale|Under 2 years old":1,"2025-07|Hennepin|Retail & storefront|Changed hands":1,"2025-07|Hennepin|Restaurant & food|Opening":2,"2025-07|Carver|Office & professional|Existing":1,"2025-07|Hennepin|Industrial & wholesale|Existing":5,"2025-07|Hennepin|Construction trade|Existing":6,"2025-07|Anoka|Industrial & wholesale|Existing":2,"2025-07|Hennepin|Office & professional|Existing":3,"2025-07|Hennepin|Clinic & care|Opening":1,"2025-07|Hennepin|Office & professional|Changed hands":2,"2025-07|Ramsey|Industrial & wholesale|Changed hands":2,"2025-07|Washington|Industrial & wholesale|Opening":1,"2025-07|Washington|Office & professional|Changed hands":2,"2025-07|Washington|Salon, pet & auto service|Under 2 years old":1,"2025-07|Ramsey|Restaurant & food|Existing":1,"2025-07|Washington|Clinic & care|Existing":1,"2025-07|Scott|Construction trade|Existing":1,"2025-07|Hennepin|Office & professional|Under 2 years old":1,"2025-07|Ramsey|Hotel, fitness & fun|Under 2 years old":1,"2025-07|Hennepin|Clinic & care|Under 2 years old":1,"2025-07|Scott|Retail & storefront|Existing":1,"2025-07|Hennepin|Restaurant & food|Under 2 years old":1,"2025-07|Anoka|Restaurant & food|Changed hands":1,"2025-07|Hennepin|Office & professional|Opening":1,"2025-07|Washington|Office & professional|Existing":1,"2025-07|Ramsey|Retail & storefront|Under 2 years old":2,"2025-07|Ramsey|Industrial & wholesale|Existing":1,"2025-07|Dakota|Hotel, fitness & fun|Changed hands":1,"2025-07|Ramsey|Hotel, fitness & fun|Opening":1,"2025-07|Anoka|Office & professional|Existing":1,"2025-07|Anoka|Clinic & care|Opening":2,"2025-07|Dakota|Salon, pet & auto service|Opening":1,"2025-07|Carver|Clinic & care|Under 2 years old":1},"total":710};
+const $=id=>document.getElementById(id);
+const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const fmt=d=>d?new Date(d.slice(0,10)+"T12:00:00").toLocaleDateString("en-US",{month:"short",day:"numeric",year:"numeric"}):"";
+const mon=m=>new Date(m+"-15T12:00:00").toLocaleDateString("en-US",{month:"long",year:"numeric"});
+const usd=n=>"$"+Math.round(n).toLocaleString("en-US");
+let ROWS=FREE.rows,FULL=false,selG=null,selC=null,shown=40,FOR=null,VARIANT="";
+// counts come from FREE.cells (month|county|group|why -> n), which covers the WHOLE list
+const cells=Object.entries(FREE.cells).map(([k,n])=>{const [month,county,group,why]=k.split("|");return {month,county,group,why,n}});
+const sum=f=>cells.filter(f).reduce((a,c)=>a+c.n,0);
+const LATEST=cells.map(c=>c.month).sort().pop();
+const inSel=c=>(!selG||c.group===selG)&&(!selC||c.county===selC);
+function stats(){
+  const n=sum(c=>inSel(c)&&c.month===LATEST),all=sum(inSel),open=sum(c=>inSel(c)&&(c.why==="Opening"||c.why==="Changed hands"));
+  $("stats").innerHTML=`<div class="stat m"><b>${all}</b><span>loans approved in the last 12 months${selC?" in "+esc(selC)+" County":""}</span></div><div class="stat f"><b>${n}</b><span>in ${mon(LATEST)}, the newest month</span></div><div class="stat o"><b>${open}</b><span>loans to a business opening or just bought</span></div>`;
+}
+$("key").innerHTML=`<span><i style="background:var(--money)"></i>amount approved</span><span><i style="background:var(--fresh)"></i>how new the money is</span><span><i style="background:var(--open)"></i>why now</span><span><i style="background:var(--hand)"></i>money in hand yet</span>`;
+function chips(){
+  const G=CFG.groupOrder.map(g=>[g,sum(c=>c.group===g&&(!selC||c.county===selC))]).filter(x=>x[1]);
+  $("groups").innerHTML=[["All",sum(c=>!selC||c.county===selC)],...G].map(([g,n])=>`<button class="chip" type="button" data-g="${esc(g)}" aria-pressed="${(g==="All"&&!selG)||g===selG}">${esc(g)} · ${n}</button>`).join("");
+  const C=CFG.countyOrder.map(k=>[k,sum(c=>c.county===k&&(!selG||c.group===selG))]).filter(x=>x[1]);
+  $("counties").innerHTML=[["All",sum(c=>!selG||c.group===selG)],...C].map(([k,n])=>`<button class="chip" type="button" data-c="${esc(k)}" aria-pressed="${(k==="All"&&!selC)||k===selC}">${esc(k)} · ${n}</button>`).join("");
+}
+$("groups").onclick=e=>{const b=e.target.closest(".chip");if(!b)return;selG=b.dataset.g==="All"?null:b.dataset.g;shown=40;chips();stats();render();Paywall.track("filter",{g:selG||"All"})};
+$("counties").onclick=e=>{const b=e.target.closest(".chip");if(!b)return;selC=b.dataset.c==="All"?null:b.dataset.c;shown=40;chips();stats();render();Paywall.track("filter",{c:selC||"All"})};
+$("sort").innerHTML=CFG.sorts.map(([k,l,paid])=>`<option value="${k}">${esc(l)}${paid&&!FULL?" (full list)":""}</option>`).join("");
+function filtered(){const r=ROWS.filter(x=>(!selG||x.group===selG)&&(!selC||x.county===selC));const k=$("sort").value;return (CFG.sortFn[k]||CFG.sortFn[CFG.sorts[0][0]])(r.slice())}
+function whyTag(r){return `<span class="tag ${r.why==="Opening"||r.why==="Changed hands"?"open":""}">${esc(r.why)}</span>`}
+function row(r){
+  const amt=FULL?usd(r.amount):esc(r.band);
+  return `<li class="r"><span class="a">${esc(r.name)}</span><span class="amt">${amt}</span><span class="w">${esc(r.what)}${r.franchise?` · ${esc(r.franchise)} franchise`:""}</span>${FULL?`<span class="k">${esc(r.street)}, ${esc(r.city)} ${esc(r.zip)} · ${esc(r.lender)}${r.jobs?` · ${r.jobs} jobs`:""}${r.term?` · ${r.term} mo`:""}</span>`:""}<span class="m"><span class="tag fresh">${esc(fmt(r.approved))}</span>${whyTag(r)}${FULL?(r.drawn?`<span class="tag hand">Drawn ${esc(fmt(r.drawn))}</span>`:`<span class="tag hand">Not drawn yet</span>`):""}<span>${esc(r.city)} · ${esc(r.county)}</span><span>${esc(r.group)}</span><span>${esc(r.program)}</span></span></li>`;
+}
+function render(){
+  const rows=filtered();const tot=sum(inSel);
+  $("count").textContent=FULL?`Showing ${Math.min(shown,rows.length)} of ${rows.length}`:`${rows.length} of ${tot} open to look at, no login`;
+  $("list").innerHTML=rows.slice(0,FULL?shown:99).map(row).join("");
+  $("more").hidden=!FULL||shown>=rows.length;
+  $("lock").innerHTML=FULL?"":Paywall.lockRow(CFG.lockText(tot-rows.length));
+}
+$("more").onclick=()=>{shown+=60;render()};
+let lastSort=$("sort").value;
+$("sort").onchange=()=>{const s=CFG.sorts.find(x=>x[0]===$("sort").value);if(s&&s[2]&&!FULL){$("sort").value=lastSort;Paywall.track("lock_click",{what:"sort"});Paywall.go();return}lastSort=$("sort").value;shown=40;render();Paywall.track("sort",{k:lastSort})};
+$("csv").onclick=()=>{
+  if(!FULL){Paywall.track("lock_click",{what:"csv"});Paywall.go();return}
+  const rows=filtered(),q=v=>{v=String(v??"");return /[",\n]/.test(v)?'"'+v.replace(/"/g,'""')+'"':v};
+  const t=[CFG.cols.map(c=>q(c[1])).join(","),...rows.map(r=>CFG.cols.map(c=>q(r[c[0]])).join(","))].join("\n");
+  const a=document.createElement("a");a.href=URL.createObjectURL(new Blob([t],{type:"text/csv"}));a.download=CFG.csv;document.body.appendChild(a);a.click();a.remove();
+  Paywall.track("download",{rows:rows.length});
+};
+// /for/<token>/ opens on the reader's own county and trade (site/for.json: token -> company, city, county, groups, variant)
+async function forPage(){
+  const m=/^\/for\/([a-z0-9]{6,16})\/?$/.exec(location.pathname);if(!m)return;
+  try{const all=await fetch("/for.json").then(r=>r.json());FOR=all[m[1]]||null}catch(e){}
+  if(!FOR)return;
+  VARIANT=FOR.variant||"";
+  selC=CFG.countyOrder.includes(FOR.county)?FOR.county:null;
+  const g=(FOR.groups||[]).find(x=>sum(c=>c.group===x&&(!selC||c.county===selC))>0);selG=g||null;
+  const inCity=FOR.city_n||0,inCounty=sum(inSel),month=sum(c=>inSel(c)&&c.month===LATEST);
+  $("for").hidden=false;
+  $("for").innerHTML=`<span class="n">For ${esc(FOR.company)}, ${esc(FOR.city)}</span><b>${inCounty}</b> businesses in ${esc(selC||"the seven counties")}${selG?` likely buying <b>${esc(selG.toLowerCase())}</b> work`:""} got an SBA loan in the last 12 months, <b>${month}</b> of them in ${mon(LATEST)}${inCity?`, and <b>${inCity}</b> ${inCity===1?"is":"are"} in ${esc(FOR.city)} itself`:""}.`;
+}
+forPage().then(()=>{
+  chips();stats();render();
+  Paywall.track("preview_open",{path:location.pathname,variant:VARIANT});
+  Paywall.init({slot:$("pay"),ctx:{path:location.pathname,variant:VARIANT},onUnlock:(d)=>{ROWS=d.rows;FULL=true;
+    $("sort").innerHTML=CFG.sorts.map(([k,l])=>`<option value="${k}">${esc(l)}</option>`).join("");
+    shown=40;chips();stats();render()}}).then(()=>{if(!FULL)render()});
+});
+</script>
+</body></html>

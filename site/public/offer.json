@@ -1,0 +1,11 @@
+{
+  "product": "just-funded",
+  "site": "https://just-funded.vercel.app",
+  "price_usd": 300,
+  "launch": 1792368000,
+  "name": "Just Funded: the full Twin Cities SBA borrower list",
+  "short": "Just Funded",
+  "thing": "full list",
+  "description": "Every SBA 7(a) and 504 loan approved in the seven-county Twin Cities in the last twelve months: borrower, street, zip, NAICS, exact amount, lender, business age, and the spreadsheet. Re-pulled weekly; one password keeps working.",
+  "line": "The full list, with street, zip, exact amount, lender and the spreadsheet, is $300, once."
+}
