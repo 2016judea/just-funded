@@ -56,3 +56,12 @@ def test_only_public_is_static_so_the_bundle_is_never_a_url():
     assert top == {"vercel.json"}, top
     assert not list((ROOT / "site" / "public").rglob("*.gz")) and not (ROOT / "site" / "public" / "api").exists()
     assert (ROOT / "site" / "public" / "offer.json").exists() and (ROOT / "site" / "public" / "paywall.js").exists()
+
+
+def test_deploy_does_not_override_the_public_output():
+    """2026-10-19: vercel.json said "public" but deploy.py's projectSettings said ".", and the
+    REST deploy took projectSettings: the paid bundle was a 200 at /api/%5Ffull/full.json.gz for
+    two hours. Both must say public."""
+    src = (ROOT / "scripts" / "deploy.py").read_text()
+    assert '"outputDirectory": "public"' in src and '"outputDirectory": "."' not in src
+    assert '"site" / "public" / "offer.json"' in src

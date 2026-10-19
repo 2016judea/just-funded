@@ -36,7 +36,7 @@ COLS = [("name", "Borrower"), ("street", "Street"), ("city", "City"), ("zip", "Z
 cfg = """{groupOrder:%s,countyOrder:%s,csv:"just-funded-twin-cities-sba.csv",cols:%s,
  sorts:[["newest","Newest first",false],["biggest","Biggest loan first",true],["drawn","Money drawn most recently",true],["county","By county",false]],
  sortFn:{newest:r=>r.sort((a,b)=>b.approved.localeCompare(a.approved)||b.amount-a.amount),biggest:r=>r.sort((a,b)=>b.amount-a.amount),drawn:r=>r.sort((a,b)=>(b.drawn||"").localeCompare(a.drawn||"")||b.approved.localeCompare(a.approved)),county:r=>r.sort((a,b)=>a.county.localeCompare(b.county)||b.approved.localeCompare(a.approved))},
- lockText:n=>`${n} more borrowers, with street, zip, exact amount, lender, and whether the money is drawn`}""" % (
+ lockText:n=>`${n} more loans, with street, zip, exact amount, lender, and whether the money is drawn`}""" % (
     json.dumps(GROUP_ORDER), json.dumps(COUNTY_ORDER), json.dumps(COLS))
 as_of_s = as_of.strftime("%b %-d, %Y")
 free = render(rows=rows, sample=sample, paid_fields=PAID, cfg_js=cfg, site=OFFER["product"], subs={

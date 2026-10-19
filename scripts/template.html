@@ -139,7 +139,7 @@ async function forPage(){
   const g=(FOR.groups||[]).find(x=>sum(c=>c.group===x&&(!selC||c.county===selC))>0);selG=g||null;
   const inCity=FOR.city_n||0,inCounty=sum(inSel),month=sum(c=>inSel(c)&&c.month===LATEST);
   $("for").hidden=false;
-  $("for").innerHTML=`<span class="n">For ${esc(FOR.company)}, ${esc(FOR.city)}</span><b>${inCounty}</b> businesses in ${esc(selC||"the seven counties")}${selG?` likely buying <b>${esc(selG.toLowerCase())}</b> work`:""} got an SBA loan in the last 12 months, <b>${month}</b> of them in ${mon(LATEST)}${inCity?`, and <b>${inCity}</b> ${inCity===1?"is":"are"} in ${esc(FOR.city)} itself`:""}.`;
+  $("for").innerHTML=`<span class="n">For ${esc(FOR.company)}, ${esc(FOR.city)}</span><b>${inCounty}</b> SBA loans in ${esc(selC||"the seven counties")}${selG?` likely buying <b>${esc(selG.toLowerCase())}</b> work`:""} were approved in the last 12 months, <b>${month}</b> of them in ${mon(LATEST)}${inCity?`, and <b>${inCity}</b> ${inCity===1?"is":"are"} in ${esc(FOR.city)} itself`:""}.`;
 }
 forPage().then(()=>{
   chips();stats();render();

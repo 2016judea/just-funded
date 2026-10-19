@@ -21,7 +21,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent / "site"
 TEAM = "team_XnhPzBEcaSfEmZFo9M2isLFY"
-PROJECT = json.loads((Path(__file__).resolve().parent.parent / "site" / "offer.json").read_text())["product"]
+PROJECT = json.loads((Path(__file__).resolve().parent.parent / "site" / "public" / "offer.json").read_text())["product"]
 SKIP_DIRS = {".git", "node_modules", "out", ".vercel", "__pycache__"}
 SKIP_FILES = {".env", ".DS_Store"}
 POLL_SECONDS = 3
@@ -80,7 +80,7 @@ def main():
     payload = json.dumps({
         "name": PROJECT, "project": PROJECT, "target": "production",
         "files": files,
-        "projectSettings": {"framework": None, "buildCommand": "echo build", "outputDirectory": ".", "installCommand": "echo skip"},
+        "projectSettings": {"framework": None, "buildCommand": "echo build", "outputDirectory": "public", "installCommand": "echo skip"},
     }).encode()
     code, out = request(
         f"https://api.vercel.com/v13/deployments?teamId={TEAM}&skipAutoDetectionConfirmation=1",
