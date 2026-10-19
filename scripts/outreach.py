@@ -178,7 +178,7 @@ def main():
             r = v["row"]
             cnt_city = sum(1 for x in ROWS if x["city"].lower() == v["city"].lower() and (SEG[s][1] is None or x["group"] in SEG[s][1]) and (SEG[s][2] is None or x["why"] in SEG[s][2]))
             cnt_county = sum(1 for x in ROWS if x["county"] == r["county"] and (SEG[s][1] is None or x["group"] in SEG[s][1]) and (SEG[s][2] is None or x["why"] in SEG[s][2]))
-            month_n = sum(1 for x in ROWS if x["county"] == r["county"] and x["month"] == max(y["month"] for y in ROWS))
+            month_n = sum(1 for x in ROWS if x["county"] == r["county"] and x["month"] == max(y["month"] for y in ROWS) and (SEG[s][1] is None or x["group"] in SEG[s][1]) and (SEG[s][2] is None or x["why"] in SEG[s][2]))
             if not v["email_source"]:
                 status, hold = "hold", "email not on their own site"
                 variant = ""
