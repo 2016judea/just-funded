@@ -1,0 +1,11 @@
+/private/
+.env
+__pycache__/
+.pytest_cache/
+.DS_Store
+site/.vercel
+site/api/_full
+/outreach/
+/data/*.json
+!/data/_meta.json
+test-output.log
