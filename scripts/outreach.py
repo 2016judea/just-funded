@@ -129,7 +129,7 @@ def draft(v, kind, r, variant, link, cnt_city, cnt_county, month_n):
     hi = f"Hi {first}," if first else "Hi,"
     if kind == "own":
         l1 = f"The SBA's public file shows {v['company']}'s own {r['program']} loan: {amt}, approved {date} through {r['lender']}."
-        l2 = f"You know how fast that money turns into work. {cnt_county} other businesses in {r['county']} County got the same kind of loan in the last twelve months, {month_n} of them in {latest_name}."
+        l2 = f"You know how fast that money turns into work. {cnt_county} more SBA loans in {r['county']} County in the last twelve months most likely buy {SEG_WORD[v['segment']]}, {month_n} of them in {latest_name}."
     else:
         l1 = f"{r['name']}, {r['what'].lower()} in {r['city']}, got a {amt} SBA {r['program']} loan approved on {date}" + (f" ({r['why'].lower()})." if r["why"] != "Existing" else ".")
         l2 = f"That is one of {cnt_city} in {v['city']} and {cnt_county} across {r['county']} County in the last twelve months whose money most likely buys {SEG_WORD[v['segment']]}."
