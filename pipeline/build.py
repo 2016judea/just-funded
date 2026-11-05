@@ -14,7 +14,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA, PRIV = ROOT / "data", ROOT / "private"
-CLOSED = Path.home() / "Desktop/bricks/data/closed_system.duckdb"
+CLOSED = Path.home() / "Desktop/workspace/bricks/data/closed_system.duckdb"
 MONTHS = 12
 
 # NAICS prefix -> what the money most likely buys. First match wins; longest prefixes first.

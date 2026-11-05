@@ -36,7 +36,7 @@ page's as-of date is newer than `data/_meta.json`.
 
 ## The paywall
 
-Ported from `~/Desktop/mpls-new-rentals` (`product-paywall` skill). Only `site/public/` is
+Ported from `~/Desktop/workspace/mpls-new-rentals` (`product-paywall` skill). Only `site/public/` is
 static on Vercel; `scripts/publish.py` writes the full list to `private/bundle/full.json.gz`
 (gitignored) and `scripts/deploy.py` uploads it as `api/_full/`, read only by `/api/data`.
 (With `outputDirectory: "."` the bundle was a URL at `/api/_full%2F...` on three sibling

@@ -11,7 +11,7 @@ Segments (Overture places with an email, cc-by-4.0, pulled 2026-08-19 into brick
   hvac       hvac_services                              -> Restaurant & food, Clinic & care, Retail, Hotel, Salon
 Own record = the vendor's own SBA loan if it has one, else a borrower in THEIR city in their segment's
 groups. No such borrower -> status=hold. Email verified by reading it off the vendor's own site today;
-not found -> hold. Deduped against ~/Desktop/outreach-ledger/outreach.duckdb (contacted).
+not found -> hold. Deduped against ~/Desktop/workspace/outreach-ledger/outreach.duckdb (contacted).
 A/B (one variable, pooled across the seven products): A states the price in the email, B leaves it to the page.
 """
 import csv, datetime as dt, hashlib, json, re, ssl, sys, urllib.request
@@ -21,8 +21,8 @@ import duckdb
 
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "outreach" / "round1"
-CLOSED = Path.home() / "Desktop/bricks/data/closed_system.duckdb"
-LEDGER = Path.home() / "Desktop/outreach-ledger/outreach.duckdb"
+CLOSED = Path.home() / "Desktop/workspace/bricks/data/closed_system.duckdb"
+LEDGER = Path.home() / "Desktop/workspace/outreach-ledger/outreach.duckdb"
 OFFER = json.loads((ROOT / "site/public/offer.json").read_text())
 ROWS = json.load(open(ROOT / "private/rows.json"))["rows"]
 TODAY = dt.date.today().isoformat()
